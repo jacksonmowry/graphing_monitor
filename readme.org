@@ -1,0 +1,19 @@
+#+title: Graphing Monitor
+#+author: Jackson Mowry
+#+date: Sat Nov  1 16:45:32 2025
+
+* Introduction
+A simple CLI tool to continuously graph input provided on =stdin= as csv.
+
+* Building
+Just run =make= (preferably with at least =-O2= optimizations enabled).
+
+* Examples
+- Graphs sin, cos, and linear functions simultaneously
+#+begin_src bash
+(for i in {1..360}; do echo "${i}" | awk '{printf("%f,%f,%f\n", sin($1/360 * 2 * 3.1415), cos($1/360 * 2 * 3.1415), $1/360)}'; sleep 0.05; done) | bin/graphing_monitor -f 30 -b terminal -d 3
+#+end_src
+[[file:img/screenshot-1762032684_1432x1024.png]]
+
+- Graph coffee roasting temperature
+[[file:img/screenshot-1762032585_1429x1020.png]]
