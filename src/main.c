@@ -1,7 +1,6 @@
 #include "renderer.h"
 #include "terminal_dots.h"
 #include "timespec.h"
-#include <bits/time.h>
 #include <float.h>
 #include <getopt.h>
 #include <math.h>
