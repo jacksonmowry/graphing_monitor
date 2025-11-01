@@ -5,6 +5,13 @@
 * Introduction
 A simple CLI tool to continuously graph input provided on =stdin= as csv.
 
+* Options
+#+begin_src bash
+-f|--fps, FPS the graph will attempt to render at
+-b|--backend, 'terminal' is the only option for now
+-d|--datapoints, How many datapoints your csv has per row
+#+end_src
+
 * Building
 Just run =make= (preferably with at least =-O2= optimizations enabled).
 

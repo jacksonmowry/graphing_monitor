@@ -191,6 +191,11 @@ int main(int argc, char* argv[]) {
     }
 
     if (error) {
+        char* help_msg =
+            "-f|--fps, FPS the graph will attempt to render at\n-b|--backend, "
+            "'terminal' is the only option for now\n-d|--datapoints, How many "
+            "datapoints your csv has per row";
+        puts(help_msg);
         exit(1);
     }
 
